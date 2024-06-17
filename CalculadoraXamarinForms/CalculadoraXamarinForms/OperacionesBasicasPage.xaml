@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraXamarinForms.OperacionesBasicasPage"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#007BFF"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="Margin" Value="10,5"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20,20,20,10"/>
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HeightRequest" Value="40"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BorderColor" Value="Black"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0,10"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Padding="30">
+        <Frame>
+            <Entry x:Name="EntryNumero1" TextColor="Black" PlaceholderColor="Black" Placeholder="Número 1" Keyboard="Numeric"/>
+        </Frame>
+        <Frame>
+            <Entry x:Name="EntryNumero2" TextColor="Black" PlaceholderColor="Black" Placeholder="Número 2" Keyboard="Numeric"/>
+        </Frame>
+        <Button Text="+" Clicked="OnSumarClicked"/>
+        <Button Text="-" Clicked="OnRestarClicked"/>
+        <Button Text="X" Clicked="OnMultiplicarClicked"/>
+        <Button Text="/" Clicked="OnDividirClicked"/>
+        <Label TextColor="Black" x:Name="ResultadoLabel"/>
+        <Button Text="Volver" Clicked="OnVolverClicked"/>
+    </StackLayout>
+</ContentPage>
